@@ -1,0 +1,14 @@
+version: '3'
+services:
+  pg-db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: db_pg
+    networks:
+      - transcendence
+networks:
+  transcendence:
