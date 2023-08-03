@@ -15,9 +15,10 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  login String
+  login String @unique
   hash String
-  avatar String
-  unique_username String
+  
+  avatar String?
+  //unique_username String?
 
 }
